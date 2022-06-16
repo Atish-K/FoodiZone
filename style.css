@@ -1,0 +1,235 @@
+/* for setting a font for the body */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #FFE7C3;
+}
+
+
+/* basic styling for navbar */
+nav {
+  color: white;
+  min-height: 10vh;
+  background-color: #D5490C;
+  margin:auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 4px #D94F0E;
+  
+}
+
+
+
+
+/* title on the navbar */
+#title {
+  font-size: 1.7rem;
+  font-weight:bold;
+  margin-top: 10px;
+}
+
+/* favourite meal page link */
+#favorite-meals-link {
+  text-decoration:solid;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  margin-left: 50px;
+}
+#favorite-meals-link:hover {
+  color: black;
+}
+
+
+/* Main */
+main {
+  height: 90vh;
+  width: 100%;
+}
+/* search container */
+.search-container {
+  margin-top: 3%;
+}
+/* input box styling */
+#search-meal-input{
+  text-align: center;
+  width: 300px;
+  height: 35px;
+  border-radius: 20px;
+}
+/* search button styling */
+#search-button {
+  margin-bottom: 3px;
+  width: 60px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+#meal,
+#favourite-meals-container {
+  width: 90%;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+/* for hiding scrollbar of the container */
+ /* ::-webkit-scrollbar {
+   display: none;
+} */
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #212529;
+  border-radius: 5px;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(206, 44, 44);
+  border-radius: 5px;
+}
+
+
+/* meal items styling */
+.meal-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 30px;
+  width: 40%;
+  height: auto;
+  background-color: white;
+  box-shadow: 2px 4px 8px 4px whitesmoke;
+   
+}
+/* meal image styling */
+.meal-img {
+  position: relative;
+}
+
+.meal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.meal-name {
+  text-align: center;
+  height: 100px;
+  font-size: 0.8rem;
+}
+
+.meal-name h3 {
+  font-size: 1.3rem;
+  margin: 5% 0;
+}
+
+.meal-name a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 20px;
+}
+
+.navbar a{
+  text-decoration:none; 
+  color: inherit; 
+}
+
+.favourite-button,
+.unfavourite-button,
+.added-button {
+  margin: 5%;
+}
+
+/* Meal Details */
+
+#meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(66, 61, 61);
+  border-radius: 10px;
+  width: 65%;
+  height: 80%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+  background-color: rgb(193, 205, 218);
+  padding: 20px;
+}
+
+.show-recipe {
+  /* important used here to display the details page */
+  display: block !important;
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.recipe-title {
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+
+.recipe-meal-img img {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.recipe-link {
+  margin: 1.4rem 0;
+  text-align: center;
+}
+.recipe-link a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+.recipe-link a:hover {
+  color: aquamarine;
+}
+
+
+
+
+
+/* media query for the responsiveness of the page in mobile devices */
+@media all and (min-width: 670px){
+  .meal-item{
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 500px){
+
+  #search-meal-input{
+    width: 230px;
+  }
+  #search-button {
+    width: 46px;
+  }
+
+  .meal-item{
+    width: 70%;
+  }
+
+}
